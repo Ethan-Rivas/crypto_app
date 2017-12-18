@@ -3,13 +3,21 @@
       .home {
           background: #56CA96;
         }
-      
+
         .scroll-content {
             background-color: map-get($colors, light);
         }
 
         ion-card-header {
             font-weight: bold;
+        }
+
+        .toolbar-md-danger .toolbar-background-md {
+          background: #009599;
+        }
+
+        .text-center {
+          text-align: center;
         }
     }
 }
