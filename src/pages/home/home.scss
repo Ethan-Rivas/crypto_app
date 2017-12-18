@@ -1,15 +1,61 @@
 .ios, .md {
     page-home {
-      .home {
-          background: #56CA96;
-        }
-      
-        .scroll-content {
-            background-color: map-get($colors, light);
-        }
-
         ion-card-header {
             font-weight: bold;
+        }
+
+        .toolbar-md-danger .toolbar-background-md {
+          background: #009599;
+        }
+
+        .text-center {
+          text-align: center;
+        }
+
+        div.scroll-content {
+          margin-top: 37px !important;
+        }
+
+        .box-data {
+          background-color: white;
+          padding-top: 35px;
+        }
+
+        .current-amount {
+          font-size: 25px;
+        }
+
+        .current-datetime {
+          padding-top: 5px;
+          color: rgb(186, 181, 184);
+        }
+
+        .chart-data {
+          margin-top: 20px;
+        }
+
+        .history-data {
+          margin-top: 20px;
+        }
+
+        .history {
+          margin-top: 20px;
+        }
+
+        ion-row.active {
+          background-color: #f5f5f5;
+        }
+
+        ion-row.success {
+          background-color: #dff0d8;
+        }
+
+        ion-row.warning {
+          background-color: #fcf8e3;
+        }
+
+        ion-row.error {
+          background-color: #f2dede;
         }
     }
 }

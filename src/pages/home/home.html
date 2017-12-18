@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="danger">
-    <ion-title>
-      Crypto Jade - Member Area
+    <ion-title class="text-center">
+      Crypto Jade - Ethan Rivas
     </ion-title>
     <ion-buttons end>
       <button ion-button (click)="logout()">
@@ -11,18 +11,72 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content class="home" padding>
+<ion-content class="home">
 
-  <h3>Welcome inside, {{username}}!</h3>
-  Your Email is: {{email}}
+  <!--<ion-card>
+    <ion-card-header>
+    <h3>Welcome inside, {{username}}!</h3>
+    Your Email is: {{email}}
+    </ion-card-header>
+    <ion-card-content class="text-center">
+      <div class="">
 
-    <ion-card>
-      <ion-card-header>
-        Line Chart
-      </ion-card-header>
-      <ion-card-content>
-        <canvas #lineCanvas></canvas>
-      </ion-card-content>
-    </ion-card>
+      </div>
+    </ion-card-content>
+  </ion-card>-->
+
+  <div class="text-center box-data">
+    <div class="header-data">
+      <div class="current-amount">
+        $25,150.65 MXN
+      </div>
+
+      <div class="current-datetime">
+        Mon Dec 18 12:20:10 CST 2017
+      </div>
+    </div>
+
+    <div class="chart-data">
+      <canvas #lineCanvas></canvas>
+    </div>
+
+    <div class="history-data">
+      <div class="current-amount">
+        History
+      </div>
+
+      <div class="history">
+        <ion-row>
+          <ion-col>
+            <strong>Initial Balance</strong>
+          </ion-col>
+          <ion-col>
+            <strong>Amount</strong>
+          </ion-col>
+          <ion-col>
+            <strong>Date</strong>
+          </ion-col>
+          <ion-col>
+            <strong>Balance</strong>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngFor="let transaction of dataSet" [ngClass]="(transaction.amount < 0) ? 'error' : 'success'">
+          <ion-col>
+            {{transaction.initial_balance|currency}}
+          </ion-col>
+          <ion-col>
+            {{transaction.amount|currency}}
+          </ion-col>
+          <ion-col>
+            {{transaction.date}}
+          </ion-col>
+          <ion-col>
+            {{transaction.current_balance|currency}}
+          </ion-col>
+        </ion-row>
+
+      </div>
+    </div>
+  </div>
 
 </ion-content>
